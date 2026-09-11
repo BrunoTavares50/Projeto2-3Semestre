@@ -1,0 +1,77 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\54166966804\\Desktop\\BolosDoJacquinWeb.API\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{477BB571-A66F-20FF-742E-5170E869C7A0}|BolosDoJacquinWeb.API.csproj|c:\\users\\54166966804\\desktop\\bolosdojacquinweb.api\\controllers\\usuariocontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{477BB571-A66F-20FF-742E-5170E869C7A0}|BolosDoJacquinWeb.API.csproj|solutionrelative:controllers\\usuariocontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{477BB571-A66F-20FF-742E-5170E869C7A0}|BolosDoJacquinWeb.API.csproj|c:\\users\\54166966804\\desktop\\bolosdojacquinweb.api\\repositories\\avaliacaorepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{477BB571-A66F-20FF-742E-5170E869C7A0}|BolosDoJacquinWeb.API.csproj|solutionrelative:repositories\\avaliacaorepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{477BB571-A66F-20FF-742E-5170E869C7A0}|BolosDoJacquinWeb.API.csproj|c:\\users\\54166966804\\desktop\\bolosdojacquinweb.api\\repositories\\usuariorepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{477BB571-A66F-20FF-742E-5170E869C7A0}|BolosDoJacquinWeb.API.csproj|solutionrelative:repositories\\usuariorepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 2,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{3ae79031-e1bc-11d0-8f78-00a0c9110057}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "UsuarioController.cs",
+              "DocumentMoniker": "C:\\Users\\54166966804\\Desktop\\BolosDoJacquinWeb.API\\Controllers\\UsuarioController.cs",
+              "RelativeDocumentMoniker": "Controllers\\UsuarioController.cs",
+              "ToolTip": "C:\\Users\\54166966804\\Desktop\\BolosDoJacquinWeb.API\\Controllers\\UsuarioController.cs",
+              "RelativeToolTip": "Controllers\\UsuarioController.cs",
+              "ViewState": "AgIAABUAAAAAAAAAAAAowCcAAAAgAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-09-11T18:52:00.722Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "UsuarioRepository.cs",
+              "DocumentMoniker": "C:\\Users\\54166966804\\Desktop\\BolosDoJacquinWeb.API\\Repositories\\UsuarioRepository.cs",
+              "RelativeDocumentMoniker": "Repositories\\UsuarioRepository.cs",
+              "ToolTip": "C:\\Users\\54166966804\\Desktop\\BolosDoJacquinWeb.API\\Repositories\\UsuarioRepository.cs",
+              "RelativeToolTip": "Repositories\\UsuarioRepository.cs",
+              "ViewState": "AgIAACEAAAAAAAAAAAAwwCgAAAAuAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-09-11T17:58:36.149Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "AvaliacaoRepository.cs",
+              "DocumentMoniker": "C:\\Users\\54166966804\\Desktop\\BolosDoJacquinWeb.API\\Repositories\\AvaliacaoRepository.cs",
+              "RelativeDocumentMoniker": "Repositories\\AvaliacaoRepository.cs",
+              "ToolTip": "C:\\Users\\54166966804\\Desktop\\BolosDoJacquinWeb.API\\Repositories\\AvaliacaoRepository.cs",
+              "RelativeToolTip": "Repositories\\AvaliacaoRepository.cs",
+              "ViewState": "AgIAABEAAAAAAAAAAAAAABIAAAA7AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-09-11T17:44:54.48Z"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
