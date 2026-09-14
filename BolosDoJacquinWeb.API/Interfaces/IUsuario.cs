@@ -13,5 +13,9 @@ namespace BolosDoJacquinWeb.API.Interfaces
         Task<List<Usuario>> Listar();
 
         Task<Usuario?> BuscarPorId(Guid id);
+
+        Task<Usuario?> BuscarPorEmailESenha(string email, string senha);
+
+        Task AtualizarSituacao(Guid id, string situacao);
     }
 }

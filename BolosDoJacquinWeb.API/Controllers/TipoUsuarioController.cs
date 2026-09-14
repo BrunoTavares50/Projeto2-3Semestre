@@ -70,7 +70,7 @@ namespace BolosDoJacquinWeb.API.Controllers
 
             await _tipoUsuario.Atualizar(id, tipoUsuario);
 
-            return Ok(tipoUsuario);
+            return Ok();
         }
 
         [HttpDelete("{id:guid}")]

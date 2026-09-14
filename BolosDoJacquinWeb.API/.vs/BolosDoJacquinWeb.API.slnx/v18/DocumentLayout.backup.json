@@ -1,18 +1,18 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\Users\\54166966804\\Desktop\\BolosDoJacquinWeb.API\\",
+  "WorkspaceRootPath": "C:\\Users\\54166966804\\Desktop\\Projeto2-3Semestre\\BolosDoJacquinWeb.API\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{477BB571-A66F-20FF-742E-5170E869C7A0}|BolosDoJacquinWeb.API.csproj|c:\\users\\54166966804\\desktop\\bolosdojacquinweb.api\\controllers\\usuariocontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{477BB571-A66F-20FF-742E-5170E869C7A0}|BolosDoJacquinWeb.API.csproj|solutionrelative:controllers\\usuariocontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{477BB571-A66F-20FF-742E-5170E869C7A0}|BolosDoJacquinWeb.API.csproj|c:\\users\\54166966804\\desktop\\projeto2-3semestre\\bolosdojacquinweb.api\\controllers\\produtocontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{477BB571-A66F-20FF-742E-5170E869C7A0}|BolosDoJacquinWeb.API.csproj|solutionrelative:controllers\\produtocontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{477BB571-A66F-20FF-742E-5170E869C7A0}|BolosDoJacquinWeb.API.csproj|c:\\users\\54166966804\\desktop\\bolosdojacquinweb.api\\repositories\\avaliacaorepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{477BB571-A66F-20FF-742E-5170E869C7A0}|BolosDoJacquinWeb.API.csproj|solutionrelative:repositories\\avaliacaorepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{477BB571-A66F-20FF-742E-5170E869C7A0}|BolosDoJacquinWeb.API.csproj|c:\\users\\54166966804\\desktop\\projeto2-3semestre\\bolosdojacquinweb.api\\interfaces\\iproduto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{477BB571-A66F-20FF-742E-5170E869C7A0}|BolosDoJacquinWeb.API.csproj|solutionrelative:interfaces\\iproduto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{477BB571-A66F-20FF-742E-5170E869C7A0}|BolosDoJacquinWeb.API.csproj|c:\\users\\54166966804\\desktop\\bolosdojacquinweb.api\\repositories\\usuariorepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{477BB571-A66F-20FF-742E-5170E869C7A0}|BolosDoJacquinWeb.API.csproj|solutionrelative:repositories\\usuariorepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{477BB571-A66F-20FF-742E-5170E869C7A0}|BolosDoJacquinWeb.API.csproj|c:\\users\\54166966804\\desktop\\projeto2-3semestre\\bolosdojacquinweb.api\\repositories\\produtorepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{477BB571-A66F-20FF-742E-5170E869C7A0}|BolosDoJacquinWeb.API.csproj|solutionrelative:repositories\\produtorepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -35,39 +35,41 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "UsuarioController.cs",
-              "DocumentMoniker": "C:\\Users\\54166966804\\Desktop\\BolosDoJacquinWeb.API\\Controllers\\UsuarioController.cs",
-              "RelativeDocumentMoniker": "Controllers\\UsuarioController.cs",
-              "ToolTip": "C:\\Users\\54166966804\\Desktop\\BolosDoJacquinWeb.API\\Controllers\\UsuarioController.cs",
-              "RelativeToolTip": "Controllers\\UsuarioController.cs",
-              "ViewState": "AgIAABUAAAAAAAAAAAAowCcAAAAgAAAAAAAAAA==",
+              "Title": "ProdutoController.cs",
+              "DocumentMoniker": "C:\\Users\\54166966804\\Desktop\\Projeto2-3Semestre\\BolosDoJacquinWeb.API\\Controllers\\ProdutoController.cs",
+              "RelativeDocumentMoniker": "Controllers\\ProdutoController.cs",
+              "ToolTip": "C:\\Users\\54166966804\\Desktop\\Projeto2-3Semestre\\BolosDoJacquinWeb.API\\Controllers\\ProdutoController.cs",
+              "RelativeToolTip": "Controllers\\ProdutoController.cs",
+              "ViewState": "AgIAAFUAAAAAAAAAAAAiwF8AAAAxAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-09-11T18:52:00.722Z",
+              "WhenOpened": "2026-09-14T16:45:52.569Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "IProduto.cs",
+              "DocumentMoniker": "C:\\Users\\54166966804\\Desktop\\Projeto2-3Semestre\\BolosDoJacquinWeb.API\\Interfaces\\IProduto.cs",
+              "RelativeDocumentMoniker": "Interfaces\\IProduto.cs",
+              "ToolTip": "C:\\Users\\54166966804\\Desktop\\Projeto2-3Semestre\\BolosDoJacquinWeb.API\\Interfaces\\IProduto.cs",
+              "RelativeToolTip": "Interfaces\\IProduto.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABQAAAA1AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-09-14T16:42:39.898Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 2,
-              "Title": "UsuarioRepository.cs",
-              "DocumentMoniker": "C:\\Users\\54166966804\\Desktop\\BolosDoJacquinWeb.API\\Repositories\\UsuarioRepository.cs",
-              "RelativeDocumentMoniker": "Repositories\\UsuarioRepository.cs",
-              "ToolTip": "C:\\Users\\54166966804\\Desktop\\BolosDoJacquinWeb.API\\Repositories\\UsuarioRepository.cs",
-              "RelativeToolTip": "Repositories\\UsuarioRepository.cs",
-              "ViewState": "AgIAACEAAAAAAAAAAAAwwCgAAAAuAAAAAAAAAA==",
+              "Title": "ProdutoRepository.cs",
+              "DocumentMoniker": "C:\\Users\\54166966804\\Desktop\\Projeto2-3Semestre\\BolosDoJacquinWeb.API\\Repositories\\ProdutoRepository.cs",
+              "RelativeDocumentMoniker": "Repositories\\ProdutoRepository.cs",
+              "ToolTip": "C:\\Users\\54166966804\\Desktop\\Projeto2-3Semestre\\BolosDoJacquinWeb.API\\Repositories\\ProdutoRepository.cs",
+              "RelativeToolTip": "Repositories\\ProdutoRepository.cs",
+              "ViewState": "AgIAAE4AAAAAAAAAAAAqwFUAAAB9AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-09-11T17:58:36.149Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "AvaliacaoRepository.cs",
-              "DocumentMoniker": "C:\\Users\\54166966804\\Desktop\\BolosDoJacquinWeb.API\\Repositories\\AvaliacaoRepository.cs",
-              "RelativeDocumentMoniker": "Repositories\\AvaliacaoRepository.cs",
-              "ToolTip": "C:\\Users\\54166966804\\Desktop\\BolosDoJacquinWeb.API\\Repositories\\AvaliacaoRepository.cs",
-              "RelativeToolTip": "Repositories\\AvaliacaoRepository.cs",
-              "ViewState": "AgIAABEAAAAAAAAAAAAAABIAAAA7AAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-09-11T17:44:54.48Z"
+              "WhenOpened": "2026-09-14T15:17:41.417Z",
+              "EditorCaption": ""
             }
           ]
         }

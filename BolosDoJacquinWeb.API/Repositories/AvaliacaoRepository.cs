@@ -14,6 +14,22 @@ namespace BolosDoJacquinWeb.API.Repositories
             _context = context;
         }
 
+        public async Task AlterarSituacao(Guid id, bool situacao, string motivoOcultacao)
+        {
+            var avaliacaoBuscada = await _context.Avaliacao.FirstOrDefaultAsync(a => a.IdAvaliacao == id);
+
+            if (avaliacaoBuscada != null)
+            {
+                avaliacaoBuscada.Situacao = situacao;
+                avaliacaoBuscada.MotivoOcultacao = motivoOcultacao;
+
+                _context.Avaliacao.Update(avaliacaoBuscada);
+                await _context.SaveChangesAsync();
+            }
+
+            throw new InvalidOperationException("Avaliação não encontrada");
+        }
+
         public async Task Atualizar(Guid id, Avaliacao avaliacao)
         {
             var avaliacaoBuscada = await _context.Avaliacao.FindAsync(id);
@@ -59,6 +75,22 @@ namespace BolosDoJacquinWeb.API.Repositories
         public async Task<List<Avaliacao>> Listar()
         {
             return await _context.Avaliacao.AsNoTracking().ToListAsync();
+        }
+
+        public async Task<List<Avaliacao>> ListarPorProduto(Guid idProduto)
+        {
+            return await _context.Avaliacao
+                .Where(a => a.IdProduto == idProduto)
+                .AsNoTracking()
+                .ToListAsync();
+        }
+
+        public async Task<List<Avaliacao>> ListarPorUsuario(Guid idUsuario)
+        {
+            return await _context.Avaliacao
+                .Where(a => a.IdUsuario == idUsuario)
+                .AsNoTracking()
+                .ToListAsync();
         }
     }
 }

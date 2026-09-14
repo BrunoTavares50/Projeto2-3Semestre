@@ -1,4 +1,5 @@
-﻿using BolosDoJacquinWeb.API.BdContextEvent;
+﻿using BolosDoJacquin.WebAPI.Utils;
+using BolosDoJacquinWeb.API.BdContextEvent;
 using BolosDoJacquinWeb.API.Interfaces;
 using BolosDoJacquinWeb.API.Models;
 using Microsoft.EntityFrameworkCore;
@@ -36,6 +37,8 @@ namespace BolosDoJacquinWeb.API.Repositories
 
         public async Task Cadastrar(Usuario usuario)
         {
+            usuario.Senha = Criptografia.GerarHash(usuario.Senha);
+
             await _context.Usuario.AddAsync(usuario);
 
             await _context.SaveChangesAsync();
@@ -56,6 +59,27 @@ namespace BolosDoJacquinWeb.API.Repositories
         public async Task<List<Usuario>> Listar()
         {
             return await _context.Usuario.AsNoTracking().ToListAsync();
+        }
+
+        public async Task<Usuario?> BuscarPorEmailESenha(string email, string senha)
+        {
+            var usuario = await _context.Usuario.Include(u => u.IdTipoUsuarioNavigation).FirstAsync(u => u.Email == email);
+
+            if (usuario == null)
+                return null;
+
+            // Verifica se a senha digitada corresponde ao hash salvo no banco
+            bool senhaValida = Criptografia.CompararHash(senha, usuario.Senha);
+
+            if (!senhaValida)
+                return null;
+
+            return usuario;
+        }
+
+        public Task AtualizarSituacao(Guid id, string situacao)
+        {
+            throw new NotImplementedException();
         }
     }
 }

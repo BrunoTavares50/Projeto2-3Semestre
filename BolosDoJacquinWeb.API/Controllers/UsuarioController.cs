@@ -32,6 +32,20 @@ namespace BolosDoJacquinWeb.API.Controllers
         }
 
         [HttpGet("{id:guid}")]
+        public async Task<IActionResult> BuscarPorId(Guid id)
+        {
+            try
+            {
+                var usuario = await _usuario.BuscarPorId(id);
+                return Ok(usuario);
+            }
+            catch (Exception e)
+            {
+                return BadRequest(e.Message);
+            }
+        }
+
+        [HttpPost]
         public async Task<IActionResult> Cadastrar([FromBody] UsuarioDTO dto)
         {
             var usuario = new Usuario()
@@ -39,7 +53,9 @@ namespace BolosDoJacquinWeb.API.Controllers
                 IdTipoUsuario = dto.IdTipoUsuario,
                 Nome = dto.Nome,
                 Email = dto.Email,
-                Senha = dto.Senha
+                Senha = dto.Senha,
+                Situacao = true,
+                DataCadastro = DateTime.Now.Date
             };
 
             await _usuario.Cadastrar(usuario);
@@ -57,9 +73,14 @@ namespace BolosDoJacquinWeb.API.Controllers
             };
 
             await _usuario.Atualizar(id, usuario);
-            return Ok(usuario);
+            return Ok();
         }
 
         [HttpDelete("{id:guid}")]
+        public async Task<IActionResult> Deletar(Guid id)
+        {
+            await _usuario.Deletar(id);
+            return NoContent();
+        }
     }
 }

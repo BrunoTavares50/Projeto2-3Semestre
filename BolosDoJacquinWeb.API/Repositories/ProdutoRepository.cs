@@ -14,6 +14,32 @@ namespace BolosDoJacquinWeb.API.Repositories
             _context = context;
         }
 
+        public async Task AlterarDisponibilidade(Guid id, string disponibilidade)
+        {
+            var produtoBuscado = await _context.Produto.FindAsync(id);
+
+            if (produtoBuscado != null)
+            {
+                produtoBuscado.Disponibilidade = disponibilidade;
+
+                _context.Produto.Update(produtoBuscado);
+                await _context.SaveChangesAsync();
+            }
+        }
+
+        public async Task AlterarSituacao(Guid id, bool situacao)
+        {
+            var produtoBuscado = await _context.Produto.FindAsync(id);
+
+            if (produtoBuscado != null)
+            {
+                produtoBuscado.Situacao = situacao;
+
+                _context.Produto.Update(produtoBuscado);
+                await _context.SaveChangesAsync();
+            }
+        }
+
         public async Task Atualizar(Guid id, Produto produto)
         {
             var produtoBuscado = await _context.Produto.FindAsync(id);
@@ -55,6 +81,34 @@ namespace BolosDoJacquinWeb.API.Repositories
 
                 await _context.SaveChangesAsync();
             }
+        }
+
+        public async Task<List<Produto>> Filtrar(Guid? idCategoria, decimal? precoMin, decimal? precoMax, string? termoBusca)
+        {
+            var query = _context.Produto.AsNoTracking();
+
+            if (idCategoria.HasValue)
+            {
+                query = query.Where(p => p.IdCategoria == idCategoria);
+            }
+
+            if (precoMin.HasValue)
+            {
+                query = query.Where(p => p.Preco >= precoMin);
+            }
+
+            if (precoMax.HasValue)
+            {
+                query = query.Where(p => p.Preco <= precoMax);
+            }
+
+            if (!string.IsNullOrEmpty(termoBusca))
+            {
+                query = query.Where(p =>
+                    p.Nome.ToLower().Contains(termoBusca.ToLower()));
+            }
+
+            return await query.ToListAsync();
         }
 
         public async Task<List<Produto>> Listar()

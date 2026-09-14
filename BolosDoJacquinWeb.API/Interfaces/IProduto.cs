@@ -13,5 +13,11 @@ namespace BolosDoJacquinWeb.API.Interfaces
         Task<List<Produto>> Listar();
 
         Task<Produto?> BuscarPorId(Guid id);
+
+        Task<List<Produto>> Filtrar(Guid? idCategoria, decimal? precoMin, decimal? precoMax, string? termoBusca);
+
+        Task AlterarDisponibilidade(Guid id, string disponibilidade);
+
+        Task AlterarSituacao(Guid id, bool situacao);
     }
 }
