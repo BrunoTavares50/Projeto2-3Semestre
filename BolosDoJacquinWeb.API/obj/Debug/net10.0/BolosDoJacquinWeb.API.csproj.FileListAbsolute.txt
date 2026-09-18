@@ -515,3 +515,4 @@ C:\Users\bruno\Desktop\BolosDoJacqquin\Projeto2-3Semestre\BolosDoJacquinWeb.API\
 C:\Users\bruno\Desktop\BolosDoJacqquin\Projeto2-3Semestre\BolosDoJacquinWeb.API\obj\Debug\net10.0\BolosDoJacquinWeb.API.pdb
 C:\Users\bruno\Desktop\BolosDoJacqquin\Projeto2-3Semestre\BolosDoJacquinWeb.API\obj\Debug\net10.0\BolosDoJacquinWeb.API.genruntimeconfig.cache
 C:\Users\bruno\Desktop\BolosDoJacqquin\Projeto2-3Semestre\BolosDoJacquinWeb.API\obj\Debug\net10.0\ref\BolosDoJacquinWeb.API.dll
+C:\Users\54166966804\Desktop\Projeto2-3Semestre\BolosDoJacquinWeb.API\bin\Debug\net10.0\CloudinaryDotNet.dll

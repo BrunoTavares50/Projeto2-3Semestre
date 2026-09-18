@@ -11,10 +11,11 @@
 using System;
 using System.Reflection;
 
+[assembly: Microsoft.Extensions.Configuration.UserSecrets.UserSecretsIdAttribute("6030ec82-8770-4eaf-b83b-ec149e6a3f5e")]
 [assembly: System.Reflection.AssemblyCompanyAttribute("BolosDoJacquinWeb.API")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+2da6c10f67ac95ece408965dee54886c8dc39b24")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+c0112d45dc058bab8fffd1510b10032fb903b4df")]
 [assembly: System.Reflection.AssemblyProductAttribute("BolosDoJacquinWeb.API")]
 [assembly: System.Reflection.AssemblyTitleAttribute("BolosDoJacquinWeb.API")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

@@ -1,4 +1,6 @@
-﻿namespace BolosDoJacquinWeb.API.DTO
+﻿using System.ComponentModel.DataAnnotations;
+
+namespace BolosDoJacquinWeb.API.DTO
 {
     public class ProdutoDTO
     {
@@ -6,7 +8,10 @@
 
         public decimal Preco { get; set; }
 
+        [StringLength(200, ErrorMessage = "o caminho da imagem pode conter no máximo 200 caracteres.")]
         public string ImagemUrl { get; set; } = string.Empty;
+
+        public IFormFile? ArquivoImagem { get; set; }
 
         public string DescricaoCurta { get; set; } = string.Empty;
 

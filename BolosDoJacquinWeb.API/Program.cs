@@ -2,6 +2,8 @@ using BolosDoJacquinWeb.API.BdContextEvent;
 using BolosDoJacquinWeb.API.Interfaces;
 using BolosDoJacquinWeb.API.Models;
 using BolosDoJacquinWeb.API.Repositories;
+using BolosDoJacquinWeb.API.Services;
+using BolosDoJacquinWeb.API.Utils;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.IdentityModel.Tokens;
@@ -43,6 +45,7 @@ builder.Services.AddScoped<IUsuario, UsuarioRepository>();
 builder.Services.AddScoped<IProduto, ProdutoRepository>();
 builder.Services.AddScoped<IAvaliacao, AvaliacaoRepository>();
 builder.Services.AddScoped<ICategoria, CategoriaRepository>();
+builder.Services.AddScoped<ICloudinaryService, CloudinaryService>();
 
 //AUTENTICAÇÃO JWT
 //Configura como a API vai validar os tokens recebidos nas requisições
@@ -77,7 +80,7 @@ builder.Services.AddAuthentication(options =>
 });
 
 ////Configuração do Cloudinary
-//builder.Services.Configure<CloudinarySettings>(builder.Configuration.GetSection("Cloudinary"));
+builder.Services.Configure<CloudinarySettings>(builder.Configuration.GetSection("Cloudinary"));
 
 ////---Sightengine(plano Free, sem cartão)---
 //builder.Services.Configure<SightengineSettings>(builder.Configuration.GetSection("Sightengine"));

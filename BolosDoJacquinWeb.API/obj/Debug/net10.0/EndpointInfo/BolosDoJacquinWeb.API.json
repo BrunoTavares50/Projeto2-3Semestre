@@ -343,6 +343,37 @@
         }
       }
     },
+    "/api/Login": {
+      "post": {
+        "tags": [
+          "Login"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/LoginDTO"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/LoginDTO"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/LoginDTO"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
     "/api/Produto": {
       "get": {
         "tags": [
@@ -360,19 +391,79 @@
         ],
         "requestBody": {
           "content": {
-            "application/json": {
+            "multipart/form-data": {
               "schema": {
-                "$ref": "#/components/schemas/ProdutoDTO"
-              }
-            },
-            "text/json": {
-              "schema": {
-                "$ref": "#/components/schemas/ProdutoDTO"
-              }
-            },
-            "application/*+json": {
-              "schema": {
-                "$ref": "#/components/schemas/ProdutoDTO"
+                "type": "object",
+                "properties": {
+                  "Nome": {
+                    "type": "string"
+                  },
+                  "Preco": {
+                    "type": "number",
+                    "format": "double"
+                  },
+                  "ImagemUrl": {
+                    "maxLength": 200,
+                    "minLength": 0,
+                    "type": "string"
+                  },
+                  "ArquivoImagem": {
+                    "type": "string",
+                    "format": "binary"
+                  },
+                  "DescricaoCurta": {
+                    "type": "string"
+                  },
+                  "DescricaoLonga": {
+                    "type": "string"
+                  },
+                  "Disponibilidade": {
+                    "type": "string"
+                  },
+                  "Situacao": {
+                    "type": "boolean"
+                  },
+                  "IdUsuario": {
+                    "type": "string",
+                    "format": "uuid"
+                  },
+                  "IdCategoria": {
+                    "type": "string",
+                    "format": "uuid"
+                  }
+                }
+              },
+              "encoding": {
+                "Nome": {
+                  "style": "form"
+                },
+                "Preco": {
+                  "style": "form"
+                },
+                "ImagemUrl": {
+                  "style": "form"
+                },
+                "ArquivoImagem": {
+                  "style": "form"
+                },
+                "DescricaoCurta": {
+                  "style": "form"
+                },
+                "DescricaoLonga": {
+                  "style": "form"
+                },
+                "Disponibilidade": {
+                  "style": "form"
+                },
+                "Situacao": {
+                  "style": "form"
+                },
+                "IdUsuario": {
+                  "style": "form"
+                },
+                "IdCategoria": {
+                  "style": "form"
+                }
               }
             }
           }
@@ -930,6 +1021,26 @@
         },
         "additionalProperties": false
       },
+      "LoginDTO": {
+        "required": [
+          "email",
+          "senha"
+        ],
+        "type": "object",
+        "properties": {
+          "email": {
+            "maxLength": 100,
+            "minLength": 0,
+            "type": "string"
+          },
+          "senha": {
+            "maxLength": 60,
+            "minLength": 0,
+            "type": "string"
+          }
+        },
+        "additionalProperties": false
+      },
       "ProdutoDTO": {
         "type": "object",
         "properties": {
@@ -942,7 +1053,14 @@
             "format": "double"
           },
           "imagemUrl": {
+            "maxLength": 200,
+            "minLength": 0,
             "type": "string",
+            "nullable": true
+          },
+          "arquivoImagem": {
+            "type": "string",
+            "format": "binary",
             "nullable": true
           },
           "descricaoCurta": {
@@ -1031,6 +1149,9 @@
     },
     {
       "name": "Categoria"
+    },
+    {
+      "name": "Login"
     },
     {
       "name": "Produto"

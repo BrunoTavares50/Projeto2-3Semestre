@@ -2,6 +2,7 @@
 using BolosDoJacquinWeb.API.Interfaces;
 using BolosDoJacquinWeb.API.Models;
 using BolosDoJacquinWeb.API.Repositories;
+using BolosDoJacquinWeb.API.Services;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
@@ -13,10 +14,12 @@ namespace BolosDoJacquinWeb.API.Controllers
     public class ProdutoController : ControllerBase
     {
         private readonly IProduto _produto;
+        private readonly ICloudinaryService _cloudinaryService;
 
-        public ProdutoController(IProduto produto)
+        public ProdutoController(IProduto produto, ICloudinaryService cloudinaryService)
         {
             _produto = produto;
+            _cloudinaryService = cloudinaryService;
         }
 
         [HttpGet]
@@ -48,23 +51,36 @@ namespace BolosDoJacquinWeb.API.Controllers
         }
 
         [HttpPost]
-        public async Task<IActionResult> Cadastrar([FromBody] ProdutoDTO dto)
+        [Consumes("multipart/form-data")]
+        public async Task<IActionResult> Cadastrar([FromForm] ProdutoDTO dto)
         {
-            var produto = new Produto()
-            {            
-                Nome = dto.Nome,
-                Preco = dto.Preco,
-                ImagemUrl = dto.ImagemUrl,
-                DescricaoCurta = dto.DescricaoCurta,
-                DescricaoLonga = dto.DescricaoLonga,
-                Disponibilidade = dto.Disponibilidade,
-                Situacao = dto.Situacao,
-                IdUsuario = dto.IdUsuario,
-                IdCategoria = dto.IdCategoria,
-            };
+            try
+            {
+                string? imagemUrl = null;
 
-            await _produto.Cadastrar(produto);
-            return StatusCode(201, produto);
+                if (dto.ArquivoImagem is not null)
+                    imagemUrl = await _cloudinaryService.UploadImagem(dto.ArquivoImagem);
+
+                var produto = new Produto()
+                {
+                    Nome = dto.Nome,
+                    Preco = dto.Preco,
+                    ImagemUrl = imagemUrl,
+                    DescricaoCurta = dto.DescricaoCurta,
+                    DescricaoLonga = dto.DescricaoLonga,
+                    Disponibilidade = dto.Disponibilidade,
+                    Situacao = dto.Situacao,
+                    IdUsuario = dto.IdUsuario,
+                    IdCategoria = dto.IdCategoria,
+                };
+
+                await _produto.Cadastrar(produto);
+                return StatusCode(201, produto);
+            }
+            catch (Exception e)
+            {
+                return BadRequest(e.Message);
+            }
         }
 
         [HttpPut("{id:guid}")]
@@ -94,9 +110,9 @@ namespace BolosDoJacquinWeb.API.Controllers
 
         [HttpGet("Filtro")]
         public async Task<IActionResult> Filtrar(
-            Guid? idCategoria, 
-            decimal? precoMin, 
-            decimal? precoMax, 
+            Guid? idCategoria,
+            decimal? precoMin,
+            decimal? precoMax,
             string? termoBusca)
         {
             var produtos = await _produto.Filtrar(
