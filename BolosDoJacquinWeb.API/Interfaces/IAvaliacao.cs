@@ -18,6 +18,6 @@ namespace BolosDoJacquinWeb.API.Interfaces
 
         Task<List<Avaliacao>> ListarPorUsuario(Guid idUsuario);
 
-        Task AlterarSituacao(Guid id, bool situacao, string motivoOcultacao);
+        Task AlterarSituacao(Guid id, bool situacao, string disponibilidade);
     }
 }

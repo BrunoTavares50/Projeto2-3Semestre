@@ -26,8 +26,6 @@ public partial class BolosJacquinContext : DbContext
 
     public virtual DbSet<Usuario> Usuario { get; set; }
 
-
-
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {
         modelBuilder.Entity<Avaliacao>(entity =>

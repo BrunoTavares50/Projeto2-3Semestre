@@ -1,18 +1,26 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\Users\\54166966804\\Desktop\\Projeto2-3Semestre\\BolosDoJacquinWeb.API\\",
+  "WorkspaceRootPath": "C:\\Users\\bruno\\Desktop\\BolosDoJacqquin\\Projeto2-3Semestre\\BolosDoJacquinWeb.API\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{477BB571-A66F-20FF-742E-5170E869C7A0}|BolosDoJacquinWeb.API.csproj|c:\\users\\54166966804\\desktop\\projeto2-3semestre\\bolosdojacquinweb.api\\controllers\\produtocontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{477BB571-A66F-20FF-742E-5170E869C7A0}|BolosDoJacquinWeb.API.csproj|c:\\users\\bruno\\desktop\\bolosdojacqquin\\projeto2-3semestre\\bolosdojacquinweb.api\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{477BB571-A66F-20FF-742E-5170E869C7A0}|BolosDoJacquinWeb.API.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{477BB571-A66F-20FF-742E-5170E869C7A0}|BolosDoJacquinWeb.API.csproj|c:\\users\\bruno\\desktop\\bolosdojacqquin\\projeto2-3semestre\\bolosdojacquinweb.api\\controllers\\logincontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{477BB571-A66F-20FF-742E-5170E869C7A0}|BolosDoJacquinWeb.API.csproj|solutionrelative:controllers\\logincontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{477BB571-A66F-20FF-742E-5170E869C7A0}|BolosDoJacquinWeb.API.csproj|c:\\users\\bruno\\desktop\\bolosdojacqquin\\projeto2-3semestre\\bolosdojacquinweb.api\\repositories\\usuariorepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{477BB571-A66F-20FF-742E-5170E869C7A0}|BolosDoJacquinWeb.API.csproj|solutionrelative:repositories\\usuariorepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{477BB571-A66F-20FF-742E-5170E869C7A0}|BolosDoJacquinWeb.API.csproj|c:\\users\\bruno\\desktop\\bolosdojacqquin\\projeto2-3semestre\\bolosdojacquinweb.api\\interfaces\\iusuario.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{477BB571-A66F-20FF-742E-5170E869C7A0}|BolosDoJacquinWeb.API.csproj|solutionrelative:interfaces\\iusuario.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{477BB571-A66F-20FF-742E-5170E869C7A0}|BolosDoJacquinWeb.API.csproj|c:\\users\\bruno\\desktop\\bolosdojacqquin\\projeto2-3semestre\\bolosdojacquinweb.api\\controllers\\produtocontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{477BB571-A66F-20FF-742E-5170E869C7A0}|BolosDoJacquinWeb.API.csproj|solutionrelative:controllers\\produtocontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{477BB571-A66F-20FF-742E-5170E869C7A0}|BolosDoJacquinWeb.API.csproj|c:\\users\\54166966804\\desktop\\projeto2-3semestre\\bolosdojacquinweb.api\\interfaces\\iproduto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{477BB571-A66F-20FF-742E-5170E869C7A0}|BolosDoJacquinWeb.API.csproj|solutionrelative:interfaces\\iproduto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{477BB571-A66F-20FF-742E-5170E869C7A0}|BolosDoJacquinWeb.API.csproj|c:\\users\\54166966804\\desktop\\projeto2-3semestre\\bolosdojacquinweb.api\\repositories\\produtorepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{477BB571-A66F-20FF-742E-5170E869C7A0}|BolosDoJacquinWeb.API.csproj|solutionrelative:repositories\\produtorepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -22,53 +30,75 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 2,
+          "SelectedChildIndex": 0,
           "Children": [
-            {
-              "$type": "Bookmark",
-              "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
-            },
-            {
-              "$type": "Bookmark",
-              "Name": "ST:0:0:{3ae79031-e1bc-11d0-8f78-00a0c9110057}"
-            },
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "ProdutoController.cs",
-              "DocumentMoniker": "C:\\Users\\54166966804\\Desktop\\Projeto2-3Semestre\\BolosDoJacquinWeb.API\\Controllers\\ProdutoController.cs",
-              "RelativeDocumentMoniker": "Controllers\\ProdutoController.cs",
-              "ToolTip": "C:\\Users\\54166966804\\Desktop\\Projeto2-3Semestre\\BolosDoJacquinWeb.API\\Controllers\\ProdutoController.cs",
-              "RelativeToolTip": "Controllers\\ProdutoController.cs",
-              "ViewState": "AgIAAFUAAAAAAAAAAAAiwF8AAAAxAAAAAAAAAA==",
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\bruno\\Desktop\\BolosDoJacqquin\\Projeto2-3Semestre\\BolosDoJacquinWeb.API\\Program.cs",
+              "RelativeDocumentMoniker": "Program.cs",
+              "ToolTip": "C:\\Users\\bruno\\Desktop\\BolosDoJacqquin\\Projeto2-3Semestre\\BolosDoJacquinWeb.API\\Program.cs",
+              "RelativeToolTip": "Program.cs",
+              "ViewState": "AgIAAC0AAAAAAAAAAAAUwDsAAAAuAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-09-14T16:45:52.569Z",
+              "WhenOpened": "2026-09-18T01:17:02.708Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 1,
-              "Title": "IProduto.cs",
-              "DocumentMoniker": "C:\\Users\\54166966804\\Desktop\\Projeto2-3Semestre\\BolosDoJacquinWeb.API\\Interfaces\\IProduto.cs",
-              "RelativeDocumentMoniker": "Interfaces\\IProduto.cs",
-              "ToolTip": "C:\\Users\\54166966804\\Desktop\\Projeto2-3Semestre\\BolosDoJacquinWeb.API\\Interfaces\\IProduto.cs",
-              "RelativeToolTip": "Interfaces\\IProduto.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABQAAAA1AAAAAAAAAA==",
+              "Title": "LoginController.cs",
+              "DocumentMoniker": "C:\\Users\\bruno\\Desktop\\BolosDoJacqquin\\Projeto2-3Semestre\\BolosDoJacquinWeb.API\\Controllers\\LoginController.cs",
+              "RelativeDocumentMoniker": "Controllers\\LoginController.cs",
+              "ToolTip": "C:\\Users\\bruno\\Desktop\\BolosDoJacqquin\\Projeto2-3Semestre\\BolosDoJacquinWeb.API\\Controllers\\LoginController.cs",
+              "RelativeToolTip": "Controllers\\LoginController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAFgAAAAqAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-09-14T16:42:39.898Z",
+              "WhenOpened": "2026-09-18T01:14:01.014Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "IUsuario.cs",
+              "DocumentMoniker": "C:\\Users\\bruno\\Desktop\\BolosDoJacqquin\\Projeto2-3Semestre\\BolosDoJacquinWeb.API\\Interfaces\\IUsuario.cs",
+              "RelativeDocumentMoniker": "Interfaces\\IUsuario.cs",
+              "ToolTip": "C:\\Users\\bruno\\Desktop\\BolosDoJacqquin\\Projeto2-3Semestre\\BolosDoJacquinWeb.API\\Interfaces\\IUsuario.cs",
+              "RelativeToolTip": "Interfaces\\IUsuario.cs",
+              "ViewState": "AgIAAAsAAAAAAAAAAAAwwBIAAAAsAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-09-18T01:07:02.857Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 2,
-              "Title": "ProdutoRepository.cs",
-              "DocumentMoniker": "C:\\Users\\54166966804\\Desktop\\Projeto2-3Semestre\\BolosDoJacquinWeb.API\\Repositories\\ProdutoRepository.cs",
-              "RelativeDocumentMoniker": "Repositories\\ProdutoRepository.cs",
-              "ToolTip": "C:\\Users\\54166966804\\Desktop\\Projeto2-3Semestre\\BolosDoJacquinWeb.API\\Repositories\\ProdutoRepository.cs",
-              "RelativeToolTip": "Repositories\\ProdutoRepository.cs",
-              "ViewState": "AgIAAE4AAAAAAAAAAAAqwFUAAAB9AAAAAAAAAA==",
+              "Title": "UsuarioRepository.cs",
+              "DocumentMoniker": "C:\\Users\\bruno\\Desktop\\BolosDoJacqquin\\Projeto2-3Semestre\\BolosDoJacquinWeb.API\\Repositories\\UsuarioRepository.cs",
+              "RelativeDocumentMoniker": "Repositories\\UsuarioRepository.cs",
+              "ToolTip": "C:\\Users\\bruno\\Desktop\\BolosDoJacqquin\\Projeto2-3Semestre\\BolosDoJacquinWeb.API\\Repositories\\UsuarioRepository.cs",
+              "RelativeToolTip": "Repositories\\UsuarioRepository.cs",
+              "ViewState": "AgIAAEoAAAAAAAAAAAAAwFkAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-09-14T15:17:41.417Z",
+              "WhenOpened": "2026-09-18T01:06:30.537Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:128:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "ProdutoController.cs",
+              "DocumentMoniker": "C:\\Users\\bruno\\Desktop\\BolosDoJacqquin\\Projeto2-3Semestre\\BolosDoJacquinWeb.API\\Controllers\\ProdutoController.cs",
+              "RelativeDocumentMoniker": "Controllers\\ProdutoController.cs",
+              "ToolTip": "C:\\Users\\bruno\\Desktop\\BolosDoJacqquin\\Projeto2-3Semestre\\BolosDoJacquinWeb.API\\Controllers\\ProdutoController.cs",
+              "RelativeToolTip": "Controllers\\ProdutoController.cs",
+              "ViewState": "AgIAAHAAAAAAAAAAAAAYwHIAAAAfAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-09-17T22:30:11.045Z",
               "EditorCaption": ""
             }
           ]

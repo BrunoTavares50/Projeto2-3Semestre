@@ -107,6 +107,20 @@ namespace BolosDoJacquinWeb.API.Controllers
 
             return Ok(produtos);
         }
+
+        [HttpPatch("Disponibilidade/{id}")]
+        public async Task<IActionResult> AlterarDisponibilidade(Guid id, [FromBody] AlterarDisponibilidadeDTO dto)
+        {
+            await _produto.AlterarDisponibilidade(id, dto.Disponibilidade);
+            return NoContent();
+        }
+
+        [HttpPatch("Situacao/{id}")]
+        public async Task<IActionResult> AlterarSituacao(Guid id, [FromBody] AlterarSituacaoDTO dto)
+        {
+            await _produto.AlterarSituacao(id, dto.Situacao);
+            return NoContent();
+        }
     }
 }
 

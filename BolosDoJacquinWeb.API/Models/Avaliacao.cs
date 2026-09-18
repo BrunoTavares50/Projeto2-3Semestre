@@ -15,7 +15,7 @@ public partial class Avaliacao
 
     public Guid? IdUsuario { get; set; }
 
-    public float Nota { get; set; }
+    public decimal Nota { get; set; }
 
     [StringLength(100)]
     [Unicode(false)]

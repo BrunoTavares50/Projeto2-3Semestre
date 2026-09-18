@@ -63,10 +63,13 @@ namespace BolosDoJacquinWeb.API.Repositories
 
         public async Task<Usuario?> BuscarPorEmailESenha(string email, string senha)
         {
-            var usuario = await _context.Usuario.Include(u => u.IdTipoUsuarioNavigation).FirstAsync(u => u.Email == email);
+            var usuario = await _context.Usuario.Include(u => u.IdTipoUsuarioNavigation).FirstOrDefaultAsync(u => u.Email == email);
 
             if (usuario == null)
                 return null;
+
+            if (!usuario.Situacao)
+                return null; // usuário desativado
 
             // Verifica se a senha digitada corresponde ao hash salvo no banco
             bool senhaValida = Criptografia.CompararHash(senha, usuario.Senha);
@@ -77,9 +80,17 @@ namespace BolosDoJacquinWeb.API.Repositories
             return usuario;
         }
 
-        public Task AtualizarSituacao(Guid id, string situacao)
+        public async Task AtualizarSituacao(Guid id, bool situacao)
         {
-            throw new NotImplementedException();
+            var usuarioBuscado = await _context.Usuario.FindAsync(id);
+
+            if (usuarioBuscado != null)
+            {
+                usuarioBuscado.Situacao = situacao;
+
+                _context.Usuario.Update(usuarioBuscado);
+                await _context.SaveChangesAsync();
+            }
         }
     }
 }

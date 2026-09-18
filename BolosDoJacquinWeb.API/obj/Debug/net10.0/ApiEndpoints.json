@@ -79,6 +79,59 @@
     "ReturnTypes": []
   },
   {
+    "ContainingType": "BolosDoJacquinWeb.API.Controllers.AvaliacaoController",
+    "Method": "AlterarSituacao",
+    "RelativePath": "api/Avaliacao/AlterarSituacao/{id}",
+    "HttpMethod": "PATCH",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Guid",
+        "IsRequired": true
+      },
+      {
+        "Name": "dto",
+        "Type": "BolosDoJacquinWeb.API.DTO.AlterarSituacaoAvaliacaoDTO",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "BolosDoJacquinWeb.API.Controllers.AvaliacaoController",
+    "Method": "ListarPorProduto",
+    "RelativePath": "api/Avaliacao/ListarPorProduto/{id}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Guid",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "BolosDoJacquinWeb.API.Controllers.AvaliacaoController",
+    "Method": "ListarPorUsuario",
+    "RelativePath": "api/Avaliacao/ListarPorUsuario/{id}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Guid",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
     "ContainingType": "BolosDoJacquinWeb.API.Controllers.CategoriaController",
     "Method": "Listar",
     "RelativePath": "api/Categoria",
@@ -231,6 +284,27 @@
       {
         "Name": "id",
         "Type": "System.Guid",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "BolosDoJacquinWeb.API.Controllers.ProdutoController",
+    "Method": "AlterarDisponibilidade",
+    "RelativePath": "api/Produto/Disponibilidade/{id}",
+    "HttpMethod": "PATCH",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Guid",
+        "IsRequired": true
+      },
+      {
+        "Name": "dto",
+        "Type": "BolosDoJacquinWeb.API.DTO.AlterarDisponibilidadeDTO",
         "IsRequired": true
       }
     ],
@@ -263,6 +337,27 @@
         "Name": "termoBusca",
         "Type": "System.String",
         "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "BolosDoJacquinWeb.API.Controllers.ProdutoController",
+    "Method": "AlterarSituacao",
+    "RelativePath": "api/Produto/Situacao/{id}",
+    "HttpMethod": "PATCH",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Guid",
+        "IsRequired": true
+      },
+      {
+        "Name": "dto",
+        "Type": "BolosDoJacquinWeb.API.DTO.AlterarSituacaoDTO",
+        "IsRequired": true
       }
     ],
     "ReturnTypes": []

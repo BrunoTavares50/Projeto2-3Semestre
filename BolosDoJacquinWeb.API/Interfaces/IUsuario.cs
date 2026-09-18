@@ -16,6 +16,6 @@ namespace BolosDoJacquinWeb.API.Interfaces
 
         Task<Usuario?> BuscarPorEmailESenha(string email, string senha);
 
-        Task AtualizarSituacao(Guid id, string situacao);
+        Task AtualizarSituacao(Guid id, bool situacao);
     }
 }

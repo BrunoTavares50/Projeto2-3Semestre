@@ -35,7 +35,7 @@ builder.Services.AddControllers().AddJsonOptions(options =>
     options.JsonSerializerOptions.ReferenceHandler = ReferenceHandler.IgnoreCycles;
 });
 
-//Injeção de de dependência
+//Injeção de dependência
 //AddScoped significa que uma instância nova é criada por requisição http
 //Isso garante que cada requisição tenha seu próprio contexto isolado
 builder.Services.AddScoped<ITipoUsuario, TipoUsuarioRepository>();
@@ -76,11 +76,24 @@ builder.Services.AddAuthentication(options =>
     };
 });
 
-// Add services to the container.
+////Configuração do Cloudinary
+//builder.Services.Configure<CloudinarySettings>(builder.Configuration.GetSection("Cloudinary"));
 
+////---Sightengine(plano Free, sem cartão)---
+//builder.Services.Configure<SightengineSettings>(builder.Configuration.GetSection("Sightengine"));
+
+//builder.Services.AddHttpClient<IModerationService, SightengineModerationService>(client =>
+//{
+//    client.BaseAddress = new Uri("https://api.sightengine.com/1.0/");
+//});
+
+//Registra o serviço de controllers(mapeia automaticamente os controllers da pasta /Controllers)
 builder.Services.AddControllers();
-// Learn more about configuring OpenAPI at https://aka.ms/aspnet/openapi
+
 builder.Services.AddOpenApi();
+
+//Registra o serviço de autorização (necessário para [Authorize] funcionar)
+builder.Services.AddAuthorization();
 
 var app = builder.Build();
 

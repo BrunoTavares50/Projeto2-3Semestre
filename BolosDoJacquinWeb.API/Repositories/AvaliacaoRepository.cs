@@ -14,20 +14,22 @@ namespace BolosDoJacquinWeb.API.Repositories
             _context = context;
         }
 
-        public async Task AlterarSituacao(Guid id, bool situacao, string motivoOcultacao)
+        public async Task AlterarSituacao(Guid id, bool situacao, string disponibilidade)
         {
             var avaliacaoBuscada = await _context.Avaliacao.FirstOrDefaultAsync(a => a.IdAvaliacao == id);
 
             if (avaliacaoBuscada != null)
             {
                 avaliacaoBuscada.Situacao = situacao;
-                avaliacaoBuscada.MotivoOcultacao = motivoOcultacao;
+                avaliacaoBuscada.MotivoOcultacao = disponibilidade;
+                avaliacaoBuscada.DataAlteracao = DateTime.UtcNow;
 
                 _context.Avaliacao.Update(avaliacaoBuscada);
                 await _context.SaveChangesAsync();
             }
 
-            throw new InvalidOperationException("Avaliação não encontrada");
+            if (avaliacaoBuscada == null)
+                throw new InvalidOperationException("Avaliação não encontrada");
         }
 
         public async Task Atualizar(Guid id, Avaliacao avaliacao)
@@ -39,8 +41,7 @@ namespace BolosDoJacquinWeb.API.Repositories
                 avaliacaoBuscada.Nota = avaliacao.Nota;
                 avaliacaoBuscada.Comentario = avaliacao.Comentario;
                 avaliacaoBuscada.MotivoOcultacao = avaliacao.MotivoOcultacao;
-                avaliacaoBuscada.DataCriacao = avaliacao.DataCriacao;
-                avaliacaoBuscada.DataAlteracao = avaliacao.DataAlteracao;
+                avaliacaoBuscada.DataAlteracao = DateTime.UtcNow;
                 avaliacaoBuscada.Situacao = avaliacao.Situacao;
 
                 _context.Avaliacao.Update(avaliacaoBuscada);
@@ -80,6 +81,7 @@ namespace BolosDoJacquinWeb.API.Repositories
         public async Task<List<Avaliacao>> ListarPorProduto(Guid idProduto)
         {
             return await _context.Avaliacao
+
                 .Where(a => a.IdProduto == idProduto)
                 .AsNoTracking()
                 .ToListAsync();

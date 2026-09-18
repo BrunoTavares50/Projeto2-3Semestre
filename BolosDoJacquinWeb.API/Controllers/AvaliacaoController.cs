@@ -53,8 +53,8 @@ namespace BolosDoJacquinWeb.API.Controllers
                 Nota = dto.Nota,
                 Comentario = dto.Comentario,
                 MotivoOcultacao = dto.MotivacaoOcultacao,
-                DataCriacao = dto.DataCriacao,
-                DataAlteracao = dto.DataAlteracao,
+                DataCriacao = DateTime.UtcNow,
+                DataAlteracao = DateTime.UtcNow,
                 Situacao = dto.Situacao,
                 IdUsuario = dto.IdUsuario,
                 IdProduto = dto.IdProduto
@@ -67,18 +67,25 @@ namespace BolosDoJacquinWeb.API.Controllers
         [HttpPut("{id:guid}")]
         public async Task<IActionResult> Atualizar(Guid id, [FromBody] AvaliacaoDTO dto)
         {
-            var avaliacao = new Avaliacao()
+            try
             {
-                Nota = dto.Nota,
-                Comentario = dto.Comentario,
-                MotivoOcultacao = dto.MotivacaoOcultacao,
-                DataCriacao = dto.DataCriacao,
-                DataAlteracao = dto.DataAlteracao,
-                Situacao = dto.Situacao
-            };
+                var avaliacao = new Avaliacao()
+                {
+                    Nota = dto.Nota,
+                    Comentario = dto.Comentario,
+                    MotivoOcultacao = dto.MotivacaoOcultacao,
+                    DataAlteracao = DateTime.UtcNow,
+                    Situacao = dto.Situacao
+                };
 
-            await _avaliacao.Atualizar(id, avaliacao);
-            return Ok();
+                await _avaliacao.Atualizar(id, avaliacao);
+                return Ok();
+
+            }
+            catch (Exception e)
+            {
+                return BadRequest(e.Message);
+            }
         }
 
         [HttpDelete("{id:guid}")]
@@ -86,6 +93,56 @@ namespace BolosDoJacquinWeb.API.Controllers
         {
             await _avaliacao.Deletar(id);
             return NoContent();
+        }
+
+        [HttpGet("ListarPorProduto/{id:guid}")]
+        public async Task<IActionResult> ListarPorProduto(Guid id)
+        {
+            try
+            {
+                var avaliacoes = await _avaliacao.ListarPorProduto(id);
+
+                foreach (var avaliacao in avaliacoes)
+                {
+                    if (!avaliacao.Situacao)
+                    {
+                        avaliacao.Comentario = null!;
+                    }
+                }
+
+                return Ok(avaliacoes);
+            }
+            catch (Exception e)
+            {
+                return BadRequest(e.Message);
+            }
+        }
+
+        [HttpGet("ListarPorUsuario/{id:guid}")]
+        public async Task<IActionResult> ListarPorUsuario(Guid id)
+        {
+            try
+            {
+                var avaliacoes = await _avaliacao.ListarPorUsuario(id);
+                return Ok(avaliacoes);
+            }
+            catch (Exception e)
+            {
+                return BadRequest(e.Message);
+            }
+        }
+
+        [HttpPatch("AlterarSituacao/{id}")]
+        public async Task<IActionResult> AlterarSituacao(Guid id, [FromBody] AlterarSituacaoAvaliacaoDTO dto)
+        {
+            var avaliacao = new Avaliacao()
+            {
+                MotivoOcultacao = dto.MotivoOcultacao,
+                Situacao = dto.Situacao
+            };
+
+            await _avaliacao.AlterarSituacao(id, avaliacao.Situacao, avaliacao.MotivoOcultacao);
+            return Ok();
         }
     }
 }

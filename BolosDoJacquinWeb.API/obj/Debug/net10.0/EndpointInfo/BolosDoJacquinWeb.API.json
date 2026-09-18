@@ -130,6 +130,94 @@
         }
       }
     },
+    "/api/Avaliacao/ListarPorProduto/{id}": {
+      "get": {
+        "tags": [
+          "Avaliacao"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "format": "uuid"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/Avaliacao/ListarPorUsuario/{id}": {
+      "get": {
+        "tags": [
+          "Avaliacao"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "format": "uuid"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/Avaliacao/AlterarSituacao/{id}": {
+      "patch": {
+        "tags": [
+          "Avaliacao"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "format": "uuid"
+            }
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/AlterarSituacaoAvaliacaoDTO"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/AlterarSituacaoAvaliacaoDTO"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/AlterarSituacaoAvaliacaoDTO"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
     "/api/Categoria": {
       "get": {
         "tags": [
@@ -425,6 +513,90 @@
         }
       }
     },
+    "/api/Produto/Disponibilidade/{id}": {
+      "patch": {
+        "tags": [
+          "Produto"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "format": "uuid"
+            }
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/AlterarDisponibilidadeDTO"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/AlterarDisponibilidadeDTO"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/AlterarDisponibilidadeDTO"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/Produto/Situacao/{id}": {
+      "patch": {
+        "tags": [
+          "Produto"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "format": "uuid"
+            }
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/AlterarSituacaoDTO"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/AlterarSituacaoDTO"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/AlterarSituacaoDTO"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
     "/api/TipoUsuario": {
       "get": {
         "tags": [
@@ -678,28 +850,59 @@
   },
   "components": {
     "schemas": {
+      "AlterarDisponibilidadeDTO": {
+        "type": "object",
+        "properties": {
+          "disponibilidade": {
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "AlterarSituacaoAvaliacaoDTO": {
+        "type": "object",
+        "properties": {
+          "motivoOcultacao": {
+            "type": "string",
+            "nullable": true
+          },
+          "situacao": {
+            "type": "boolean"
+          }
+        },
+        "additionalProperties": false
+      },
+      "AlterarSituacaoDTO": {
+        "type": "object",
+        "properties": {
+          "situacao": {
+            "type": "boolean"
+          }
+        },
+        "additionalProperties": false
+      },
       "AvaliacaoDTO": {
+        "required": [
+          "comentario",
+          "nota"
+        ],
         "type": "object",
         "properties": {
           "nota": {
+            "maximum": 5,
+            "minimum": 0,
             "type": "number",
-            "format": "float"
+            "format": "double"
           },
           "comentario": {
-            "type": "string",
-            "nullable": true
+            "maxLength": 500,
+            "minLength": 1,
+            "type": "string"
           },
           "motivacaoOcultacao": {
             "type": "string",
             "nullable": true
-          },
-          "dataCriacao": {
-            "type": "string",
-            "format": "date-time"
-          },
-          "dataAlteracao": {
-            "type": "string",
-            "format": "date-time"
           },
           "situacao": {
             "type": "boolean"
